@@ -4,3 +4,5 @@ numpy
 SQLAlchemy
 pymysql
 black
+matplotlib
+ipykernel
