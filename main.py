@@ -3,7 +3,7 @@ from src.extractTransform import transacoes_pix
 from src.load import saveCsv, saveSQLite, saveMySQL
 
 dadosPix = transacoes_pix("202501")
-# saveCsv(dadosPix, "./src/datasets/transacoes_pix", ";", ".")
+saveCsv(dadosPix, "./src/datasets/transacoes_pix", ";", ".")
 
 saveSQLite(dadosPix, "src/datasets/dadosPix.db", "transacoes_pix")
 
