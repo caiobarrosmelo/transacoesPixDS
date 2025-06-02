@@ -13,7 +13,7 @@ def transacoes_pix(data: str) -> pd.DataFrame:
     DataFrame com os dados de transações do Pix.
     """
     # Monta a URL com o parâmetro "data" passado à função
-    url = f"https://olinda.bcb.gov.br/olinda/servico/Pix_DadosAbertos/versao/v1/odata/EstatisticasTransacoesPix(Database=@Database)?@Database='202501'&$top=100&$format=json&$select=AnoMes,PAG_PFPJ,REC_PFPJ,PAG_REGIAO,REC_REGIAO,PAG_IDADE,REC_IDADE,FORMAINICIACAO,NATUREZA,FINALIDADE,VALOR,QUANTIDADE&$filter=AnoMes eq {data}"
+    url = f"https://olinda.bcb.gov.br/olinda/servico/Pix_DadosAbertos/versao/v1/odata/EstatisticasTransacoesPix(Database=@Database)?@Database='202501'&$top=10000&$format=json&$select=AnoMes,PAG_PFPJ,REC_PFPJ,PAG_REGIAO,REC_REGIAO,PAG_IDADE,REC_IDADE,FORMAINICIACAO,NATUREZA,FINALIDADE,VALOR,QUANTIDADE&$filter=AnoMes eq {data}"
 
     # Faz a requisição para a API
     req = requests.get(url)
