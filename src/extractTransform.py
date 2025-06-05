@@ -3,7 +3,6 @@ import requests
 
 def transacoes_pix(data: str) -> pd.DataFrame:
     """
-    Modo puro sangue.
     Função para extrair dados de transações do Pix do Banco Central do Brasil.
 
     Atributo:
